@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - src: https://github.com/kisev/ansible-role-epel
+  - src: git+https://github.com/kisev/ansible-role-epel.git
     scm: git
     version: master
 
