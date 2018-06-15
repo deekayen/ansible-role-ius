@@ -7,7 +7,7 @@ Allow install on hosts without direct internet connection (used http(s) proxy).
 
 ## Requirements
 
-RHEL/CentOS 6 or 7 version
+RHEL/CentOS 7 version
 
 ## Role Variables
 
@@ -34,6 +34,8 @@ ius_enable_archive_source: false
 ```
 
 ## Dependencies
+
+Add next roles to your playbook:
 
 - [ansible-role-epel](https://github.com/kisev/ansible-role-epel)
 
