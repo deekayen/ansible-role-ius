@@ -1,6 +1,8 @@
 ---
 dependencies:
-  - ansible-role-epel
+  - src: git@github.com:kisev/ansible-role-epel.git
+    scm: git
+    version: master
 
 galaxy_info:
   author: Kirill Sevriugin
