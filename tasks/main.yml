@@ -15,3 +15,5 @@
   command: "yum makecache"
   args:
     warn: false
+  tags:
+    - skip_ansible_lint
