@@ -25,7 +25,7 @@ env:
   - ANSIBLE_VERSION=2.5.5
   - ANSIBLE_VERSION=latest
 install:
-  - if ["${ANSIBLE_VERSION}" == "latest"]; then pip3 install -U ansible ansible-lint; else pip3 install -U ansible==${ANSIBLE_VERSION} ansible-lint; fi
+  - if [ "${ANSIBLE_VERSION}" = "latest" ]; then pip3 install -U ansible ansible-lint; else pip3 install -U ansible==${ANSIBLE_VERSION} ansible-lint; fi
 script:
   - ansible-lint --version
   - ansible-lint -v .
