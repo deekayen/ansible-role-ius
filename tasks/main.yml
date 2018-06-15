@@ -1,0 +1,17 @@
+---
+- name: "Add IUS repository"
+  become: true
+  template:
+    src: "{{ item }}"
+    dest: "{{ ius_repo_files_path }}/{{ item }}"
+  with_items:
+    - "ius.repo"
+    - "ius-testing.repo"
+    - "ius-dev.repo"
+    - "ius-archive.repo"
+
+- name: "Update yum cache"
+  become: true
+  command: "yum makecache"
+  args:
+    warn: false

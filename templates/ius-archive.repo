@@ -1,0 +1,44 @@
+[ius-archive]
+name=IUS Community Packages for Enterprise Linux {{ ius_rel }} - $basearch - Archive
+{% if ius_enable_mirrors %}
+mirrorlist=https://mirrors.iuscommunity.org/mirrorlist?repo={{ ius_repo_mirror_name}}{{ ansible_distribution_major_version }}-archive&arch=$basearch&protocol=http
+{% else %}
+baseurl={{ ius_repo_url }}/archive/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}/$basearch
+{% endif %}
+failovermethod=priority
+enabled={{ ius_enable_archive }}
+gpgcheck=1
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
+{% if proxy_url %}
+proxy={{ proxy_url }}
+{% endif %}
+
+[ius-archive-debuginfo]
+name=IUS Community Packages for Enterprise Linux {{ ansible_distribution_major_version }} - $basearch - Archive Debug
+{% if ius_enable_mirrors %}
+mirrorlist=https://mirrors.iuscommunity.org/mirrorlist?repo={{ ius_repo_mirror_name}}{{ ansible_distribution_major_version }}-archive-debuginfo&arch=$basearch&protocol=http
+{% else %}
+baseurl={{ ius_repo_url }}/archive/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}/$basearch/debuginfo
+{% endif %}
+failovermethod=priority
+enabled={{ ius_enable_archive_debuginfo }}
+gpgcheck=1
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
+{% if proxy_url %}
+proxy={{ proxy_url }}
+{% endif %}
+
+[ius-archive-source]
+name=IUS Community Packages for Enterprise Linux {{ ansible_distribution_major_version }} - $basearch - Archive Source
+{% if ius_enable_mirrors %}
+mirrorlist=https://mirrors.iuscommunity.org/mirrorlist?repo={{ ius_repo_mirror_name}}{{ ansible_distribution_major_version }}-archive-source&arch=source&protocol=http
+{% else %}
+baseurl={{ ius_repo_url }}/archive/{{ ansible_distribution }}/{{ ansible_distribution_major_version }}/SRPMS
+{% endif %}
+failovermethod=priority
+enabled={{ ius_enable_archive_source }}
+gpgcheck=1
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
+{% if proxy_url %}
+proxy={{ proxy_url }}
+{% endif %}
