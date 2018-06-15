@@ -1,8 +1,6 @@
 ---
 language: python
 python: "3.6"
-sudo: required
-dist: trusty
 env:
   - ANSIBLE_VERSION=2.2.0.0
   - ANSIBLE_VERSION=2.2.1.0
