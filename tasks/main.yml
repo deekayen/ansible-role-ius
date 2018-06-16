@@ -9,6 +9,7 @@
     - "ius-testing.repo"
     - "ius-dev.repo"
     - "ius-archive.repo"
+  register: ius_templates
 
 - name: "Update yum cache"
   become: true
@@ -17,3 +18,4 @@
     warn: false
   tags:
     - skip_ansible_lint
+  when: ius_templates is changed
