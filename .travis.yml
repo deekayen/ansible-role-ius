@@ -1,5 +1,6 @@
 ---
 language: python
+cache: pip
 python: "3.6"
 env:
   - ANSIBLE_VERSION=2.2.0.0
