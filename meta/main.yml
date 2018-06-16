@@ -5,7 +5,7 @@ galaxy_info:
   author: Kirill Sevriugin
   description: Ansible role for IUS repository
   license: MIT
-  min_ansible_version: 2.2
+  min_ansible_version: 2.4
   platforms:
     - name: EL
       versions:
