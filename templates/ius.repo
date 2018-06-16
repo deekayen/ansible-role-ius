@@ -8,7 +8,7 @@ baseurl={{ ius_repo_url }}/stable/{{ ansible_distribution }}/{{ ansible_distribu
 failovermethod=priority
 enabled={{ ius_enable }}
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
 {% if proxy_url %}
 proxy={{ proxy_url }}
 {% endif %}
@@ -23,7 +23,7 @@ baseurl={{ ius_repo_url }}/stable/{{ ansible_distribution }}/{{ ansible_distribu
 failovermethod=priority
 enabled={{ ius_enable_debuginfo }}
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
 {% if proxy_url %}
 proxy={{ proxy_url }}
 {% endif %}
@@ -38,7 +38,7 @@ baseurl={{ ius_repo_url }}/stable/{{ ansible_distribution }}/{{ ansible_distribu
 failovermethod=priority
 enabled={{ ius_enable_source }}
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+gpgkey={{ ius_repo_url }}/IUS-COMMUNITY-GPG-KEY
 {% if proxy_url %}
 proxy={{ proxy_url }}
 {% endif %}
