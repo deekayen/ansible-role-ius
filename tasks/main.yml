@@ -1,4 +1,12 @@
 ---
+- name: "Ensure that proxy available"
+  uri:
+    url: "{{ proxy_url }}"
+    method: CONNECT
+    status_code: 500
+    timeout: 2
+  when: proxy_url != ''
+
 - name: "Add IUS repository"
   become: true
   template:
