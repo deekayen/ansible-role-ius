@@ -14,7 +14,7 @@ ius_repo_url: "https://dl.iuscommunity.org/pub/ius"
 ius_repo_mirror_name: "{% if ansible_distribution == 'RedHat' %}ius-el{% else %}ius-centos{% endif %}"
 
 ## Allow use mirror list
-ius_enable_mirrors: false
+ius_enable_mirrors: true
 
 ## IUS main
 ius_enable: true
