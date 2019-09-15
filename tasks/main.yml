@@ -1,13 +1,13 @@
 ---
-- name: "Ensure that proxy available"
+- name: "Ensure proxy is available."
   uri:
     url: "{{ proxy_url }}"
     method: CONNECT
     status_code: 500
     timeout: 2
-  when: proxy_url != ''
+  when: proxy_url | length > 0
 
-- name: "Add IUS repository"
+- name: "Add IUS repository."
   become: true
   template:
     src: "{{ item }}"
@@ -19,7 +19,7 @@
     - "ius-archive.repo"
   register: ius_templates
 
-- name: "Update yum cache"
+- name: "Update yum cache."
   become: true
   command: "yum makecache"
   args:
