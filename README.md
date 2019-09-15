@@ -1,6 +1,6 @@
 # ansible-role-ius
 
-[![Build Status](https://travis-ci.org/kisev/ansible-role-ius.svg?branch=master)](https://travis-ci.org/kisev/ansible-role-ius)
+[![Build Status](https://travis-ci.org/deekayen/ansible-role-ius.svg?branch=master)](https://travis-ci.org/deekayen/ansible-role-ius)
 
 Install the [IUS repository](https://ius.io/) (Inline with Upstream Stable) for RHEL/CentOS.
 Allow install on hosts without direct internet connection (used http(s) proxy).
@@ -45,7 +45,7 @@ Add next roles to your playbook:
 
 ```bash
 $ cat requirements.yml
-- src: kisev/ius
+- src: deekayen.ius
   version: master
 
 $ ansible-galaxy install -r requirements.yml
@@ -55,8 +55,7 @@ $ ansible-galaxy install -r requirements.yml
 
 ```bash
 $ cat requirements.yml
-- src: git@github.com:kisev/ansible-role-ius.git
-  scm: git
+- src: git@github.com:deekayen/ansible-role-ius.git
   version: master
 
 $ ansible-galaxy install -r requirements.yml
@@ -65,9 +64,7 @@ $ ansible-galaxy install -r requirements.yml
 ```yaml
 - hosts: servers
   roles:
-    - kisev.ius
-    # or
-    - ansible-role-ius
+    - deekayen.ius
 ```
 
 ## License
@@ -76,4 +73,4 @@ MIT
 
 ## Author Information
 
-[Kirill Sevriugin](https://kisev.me) <kisevme@gmail.com>
+[Kirill Sevriugin](https://kisev.me) <kisevme@gmail.com> was the original author but deleted the GitHub repository. David Norman asked for a backup copy and then forked it.
