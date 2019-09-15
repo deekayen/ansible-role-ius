@@ -2,6 +2,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: repo-ius
   author: Kirill Sevriugin
   description: Ansible role for IUS repository
   license: MIT
