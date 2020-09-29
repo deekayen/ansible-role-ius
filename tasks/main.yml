@@ -12,6 +12,7 @@
   template:
     src: "{{ item }}"
     dest: "{{ ius_repo_files_path }}/{{ item }}"
+    mode: 0644
   with_items:
     - "ius.repo"
     - "ius-testing.repo"
