@@ -4,22 +4,17 @@ language: python
 cache: pip
 
 env:
-  - ANSIBLE_VERSION=2.4.4.0
-  - ANSIBLE_VERSION=2.5.15
-  - ANSIBLE_VERSION=2.6.19
-  - ANSIBLE_VERSION=2.7.13
-  - ANSIBLE_VERSION=2.8.5
+  - ANSIBLE_VERSION=2.8.15
+  - ANSIBLE_VERSION=2.9.13
   - ANSIBLE_VERSION=latest
 
 install:
-  - if [ "${ANSIBLE_VERSION}" = "latest" ]; then pip3 install -U ansible ansible-lint ansible-review; else pip3 install -U ansible==${ANSIBLE_VERSION} ansible-lint ansible-review; fi
+  - if [ "${ANSIBLE_VERSION}" = "latest" ]; then pip3 install -U ansible ansible-lint; else pip3 install -U ansible==${ANSIBLE_VERSION} ansible-lint; fi
 
 script:
   - ansible-lint --version
-  - ansible-review --version
   - ansible-lint -v .
   - ansible --version
-  - git ls-files | grep -Ei '^[^[:punct:]].+.(yaml|yml)$' | xargs ansible-review -q
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check -e 'ansible_python_interpreter=/usr/bin/python3'
 
 notifications:
