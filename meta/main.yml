@@ -1,10 +1,13 @@
 ---
-dependencies: []
 
 galaxy_info:
   role_name: repo_ius
   author: Kirill Sevriugin
-  description: Ansible role for IUS repository
+  description: Ansible role for IUS repository.
+
+  github_branch: main
+  issue_tracker_url: https://github.com/deekayen/ansible-role-ius/issues
+
   license: MIT
   min_ansible_version: 2.4
   platforms:
@@ -14,3 +17,5 @@ galaxy_info:
   galaxy_tags:
     - ius
     - repository
+
+dependencies: []
