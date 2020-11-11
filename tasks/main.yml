@@ -9,16 +9,9 @@
 
 - name: "Add IUS repository."
   become: true
-  template:
-    src: "{{ item }}"
-    dest: "{{ ius_repo_files_path }}/{{ item }}"
-    mode: 0644
-  with_items:
-    - "ius.repo"
-    - "ius-testing.repo"
-    - "ius-dev.repo"
-    - "ius-archive.repo"
-  register: ius_templates
+  yum:
+    name: "{{ ius_repo_files_path }}/ius-release-el{{ ansible_distribution_major_version }}.rpm"
+  register: ius_repo
 
 - name: "Update yum cache."
   become: true
@@ -27,4 +20,4 @@
     warn: false
   tags:
     - skip_ansible_lint
-  when: ius_templates is changed
+  when: ius_repo is changed
