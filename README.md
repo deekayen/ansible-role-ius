@@ -25,7 +25,7 @@ ius_enable_archive: false
 
 Add next roles to your playbook:
 
-- [ansible-role-epel](https://github.com/kisev/ansible-role-epel)
+- [geerlingguy.repo-epel](https://github.com/geerlingguy/ansible-role-repo-epel)
 
 ## Example Playbook
 
