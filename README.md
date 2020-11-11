@@ -15,22 +15,10 @@ See defaults/main.yml for details
 
 ```yaml
 proxy_url: ""
-ius_repo_files_path: "/etc/yum.repos.d"
 ius_repo_url: "https://dl.iuscommunity.org/pub/ius"
-ius_repo_mirror_name: "{% if ansible_distribution == 'RedHat' %}ius-el{% else %}ius-centos{% endif %}"
-ius_enable_mirrors: false
 ius_enable: true
-ius_enable_debuginfo: false
-ius_enable_source: false
 ius_enable_testing: false
-ius_enable_testing_debuginfo: false
-ius_enable_testing_source: false
-ius_enable_dev: false
-ius_enable_dev_debuginfo: false
-ius_enable_dev_source: false
 ius_enable_archive: false
-ius_enable_archive_debuginfo: false
-ius_enable_archive_source: false
 ```
 
 ## Dependencies
