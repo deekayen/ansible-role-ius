@@ -15,7 +15,7 @@ See defaults/main.yml for details
 
 ```yaml
 proxy_url: ""
-ius_repo_url: "https://dl.iuscommunity.org/pub/ius"
+ius_repo_url: "https://repo.ius.io/"
 ius_enable: true
 ius_enable_testing: false
 ius_enable_archive: false
@@ -33,7 +33,7 @@ Add next roles to your playbook:
 
 ```bash
 $ cat requirements.yml
-- src: deekayen.ius
+- src: deekayen.repo_ius
   version: main
 
 $ ansible-galaxy install -r requirements.yml
@@ -52,7 +52,7 @@ $ ansible-galaxy install -r requirements.yml
 ```yaml
 - hosts: servers
   roles:
-    - deekayen.ius
+    - deekayen.repo_ius
 ```
 
 ## License
