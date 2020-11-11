@@ -1,6 +1,6 @@
 # ansible-role-ius
 
-[![Build Status](https://travis-ci.org/deekayen/ansible-role-ius.svg?branch=main)](https://travis-ci.org/deekayen/ansible-role-ius) [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+[![CI](https://github.com/deekayen/ansible-role-ius/workflows/CI/badge.svg)](https://github.com/deekayen/ansible-role-ius/actions?query=workflow%3ACI) [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 Install the [IUS repository](https://ius.io/) (Inline with Upstream Stable) for RHEL/CentOS.
 Allow install on hosts without direct internet connection (used http(s) proxy).
