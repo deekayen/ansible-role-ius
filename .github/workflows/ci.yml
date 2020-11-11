@@ -43,8 +43,8 @@ jobs:
     strategy:
       matrix:
         distro:
+          - centos6
           - centos7
-          - centos8
 
     steps:
       - name: Check out the codebase.
