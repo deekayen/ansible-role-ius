@@ -20,4 +20,4 @@ galaxy_info:
     - repository
 
 dependencies:
-  - geerlingguy.repo_epel
+  - src: geerlingguy.repo-epel
