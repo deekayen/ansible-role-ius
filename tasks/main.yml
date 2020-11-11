@@ -7,11 +7,26 @@
     timeout: 2
   when: proxy_url | length > 0
 
-- name: "Add IUS repository."
+- name: "Add IUS release repository."
   become: true
   yum:
-    name: "{{ ius_repo_files_path }}/ius-release-el{{ ansible_distribution_major_version }}.rpm"
+    name: "{{ iius_repo_url }}/ius-release-el{{ ansible_distribution_major_version }}.rpm"
   register: ius_repo
+  when: ius_enable
+
+- name: "Add IUS testing repository."
+  become: true
+  yum:
+    name: "{{ iius_repo_url }}/ius-testing-{{ ansible_distribution_major_version }}.rpm"
+  register: ius_testing
+  when: ius_enable_testing
+
+- name: "Add IUS testing repository."
+  become: true
+  yum:
+    name: "{{ iius_repo_url }}/ius-testing-{{ ansible_distribution_major_version }}.rpm"
+  register: ius_testing
+  when: ius_enable_archive
 
 - name: "Update yum cache."
   become: true
