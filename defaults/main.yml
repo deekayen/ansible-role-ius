@@ -5,33 +5,14 @@
 proxy_url: ""
 
 # "ius_" prefix for all role vars
-## Path for repo files
-ius_repo_files_path: "/etc/yum.repos.d"
-
 ## IUS repo URL
 ius_repo_url: "https://repo.ius.io/"
 
-ius_repo_mirror_name: "{% if ansible_distribution == 'RedHat' %}ius-el{% else %}ius-centos{% endif %}"
-
-## Allow use mirror list
-ius_enable_mirrors: true
-
 ## IUS main
 ius_enable: true
-ius_enable_debuginfo: false
-ius_enable_source: false
 
 ## IUS tesing
 ius_enable_testing: false
-ius_enable_testing_debuginfo: false
-ius_enable_testing_source: false
-
-## IUS dev
-ius_enable_dev: false
-ius_enable_dev_debuginfo: false
-ius_enable_dev_source: false
 
 ## IUS archive
 ius_enable_archive: false
-ius_enable_archive_debuginfo: false
-ius_enable_archive_source: false
