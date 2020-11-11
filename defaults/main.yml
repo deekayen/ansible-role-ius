@@ -9,7 +9,7 @@ proxy_url: ""
 ius_repo_files_path: "/etc/yum.repos.d"
 
 ## IUS repo URL
-ius_repo_url: "https://dl.iuscommunity.org/pub/ius"
+ius_repo_url: "https://repo.ius.io/"
 
 ius_repo_mirror_name: "{% if ansible_distribution == 'RedHat' %}ius-el{% else %}ius-centos{% endif %}"
 
