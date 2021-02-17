@@ -18,7 +18,6 @@ jobs:
     strategy:
       matrix:
         distro:
-          - centos6
           - centos7
 
     steps:
