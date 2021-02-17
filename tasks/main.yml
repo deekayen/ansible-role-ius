@@ -15,6 +15,7 @@
   become: true
   yum:
     name: "{{ ius_repo_url }}/ius-release-el{{ ansible_distribution_major_version }}.rpm"
+    state: present
   register: ius_repo
   when: ius_enable
 
@@ -22,6 +23,7 @@
   become: true
   yum:
     name: "{{ ius_repo_url }}/ius-testing-{{ ansible_distribution_major_version }}.rpm"
+    state: present
   register: ius_testing
   when: ius_enable_testing
 
@@ -29,6 +31,7 @@
   become: true
   yum:
     name: "{{ ius_repo_url }}/ius-testing-{{ ansible_distribution_major_version }}.rpm"
+    state: present
   register: ius_testing
   when: ius_enable_archive
 
