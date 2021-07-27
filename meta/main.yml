@@ -2,6 +2,7 @@
 
 galaxy_info:
   role_name: repo_ius
+  namespace: deekayen
   author: Kirill Sevriugin
   description: Ansible role for IUS repository.
 
