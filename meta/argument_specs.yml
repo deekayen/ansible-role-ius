@@ -1,0 +1,33 @@
+---
+argument_specs:
+  main:
+    short_description: Install the IUS repository on EL 7.
+    description:
+      - Installs the IUS (Inline with Upstream Stable) release package, and
+        optionally the testing and archive repositories, on EL 7. IUS only
+        published EL 7 packages.
+    author:
+      - Kirill Sevriugin
+    options:
+      proxy_url:
+        type: str
+        default: ""
+        description: >-
+          http(s) proxy to check before installing, for hosts without direct
+          Internet access, e.g. https://USERNAME:PASSWORD@HOST:PORT.
+      ius_repo_url:
+        type: str
+        default: https://repo.ius.io/
+        description: Base URL of the IUS repository.
+      ius_enable:
+        type: bool
+        default: true
+        description: Install the IUS release repository.
+      ius_enable_testing:
+        type: bool
+        default: false
+        description: Install the IUS testing repository.
+      ius_enable_archive:
+        type: bool
+        default: false
+        description: Install the IUS archive repository.

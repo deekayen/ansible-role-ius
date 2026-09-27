@@ -1,8 +1,7 @@
 ---
-
 galaxy_info:
-  role_name: repo_ius
   namespace: deekayen
+  role_name: repo_ius
   author: Kirill Sevriugin
   description: Ansible role for IUS repository.
 
@@ -10,14 +9,18 @@ galaxy_info:
   issue_tracker_url: https://github.com/deekayen/ansible-role-ius/issues
 
   license: MIT
-  min_ansible_version: 2.4
+  min_ansible_version: "2.15"
+
+  # IUS only published EL 7 packages. EL 7 targets need ansible-core 2.16 or
+  # older, the last release that manages Python 2.7/3.6 hosts.
   platforms:
     - name: EL
       versions:
-        - 7
+        - "7"
+
   galaxy_tags:
     - ius
     - repository
 
 dependencies:
-  - src: geerlingguy.repo-epel
+  - role: geerlingguy.repo-epel

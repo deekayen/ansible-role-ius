@@ -1,0 +1,7 @@
+---
+roles:
+  - name: geerlingguy.repo-epel
+
+# geerlingguy.repo-epel calls ini_file by its short name.
+collections:
+  - name: community.general

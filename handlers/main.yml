@@ -1,0 +1,7 @@
+---
+# EL 7 has no dnf, and current ansible-core runs ansible.builtin.yum as an
+# alias of dnf, so call yum directly.
+- name: Update yum cache.
+  become: true
+  ansible.builtin.command: yum makecache  # noqa: command-instead-of-module
+  changed_when: true
